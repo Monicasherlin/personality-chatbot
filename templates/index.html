@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="background"></div>
+
+<div class="chat-container">
+
+    <div class="character-select">
+        <button id="sweetBtn" class="active" onclick="setPersonality('sweet')">Sweet</button>
+        <button id="rudeBtn" onclick="setPersonality('rude')">Rude</button>
+    </div>
+
+    <div id="chat-box" class="chat-box"></div>
+
+    <div class="input-area">
+        <input type="text" id="message-input" placeholder="Enter message...">
+        <button onclick="sendMessage()">➤</button>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
